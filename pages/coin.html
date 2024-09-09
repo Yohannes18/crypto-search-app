@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
+    <title>FullStack Crypto Marketplace</title>
+</head>
+<body id="dark-theme">
+    
+
+    <div class="main">
+
+        <div class="global">
+            <p>Coins: <b id="coins-count">N/A</b></p>
+            <p>Exchanges: <b id="exchanges-count">N/A</b></p>
+            <p>Market Cap: <span><b id="marketCap">N/A</b> <span id="marketCapChange">N/A </span> <i class="ri-arrow-down-s-fill"></i></span></span></p>
+            <p>24H Vol: <b id="volume">N/A</b></p>
+            <p>Dominance: <b id="dominance">BTC N/A% - ETH N/A%</b></p>
+        </div>
+
+        <nav>
+            <div class="left-section">
+                <a href="index.html" class="logo"><i class="ri-code-s-slash-fill"></i></a>
+                <div class="nav-links">
+                    <a href="/index.html">Home</a>
+                    <a href="/pages/charts.html">Charts</a>
+                    <a href="/pages/search.html">Search</a>
+                    <a href="/pages/about.html">About Us</a>
+                </div>
+            </div>
+
+            <div class="right-section">
+                <form id="searchForm" class="search">
+                    <i class="ri-search-line"></i>
+                    <input type="text" id="searchInput" placeholder="Search for asset..." required autocomplete="off">
+                </form>
+                <i id="theme-toggle" class="ri-sun-line"></i>
+            </div>
+        </nav>
+
+        <div class="coin-container">
+            <div class="left-section">
+                <div class="ticker">
+                    <div class="tradingview-widget-container" id="ticker-widget"></div>
+                </div>
+                <h3>Statistics</h3>
+                <div class="coin-info">
+                    <div class="logo">
+                        <img src="../bitcoin.png" alt="bitcoin">
+                        <h4>Bitcoin <span>(BTC)</span></h4>
+                        <p>#1</p>
+                    </div>
+
+                    <div class="status">
+                        <div class="item">
+                            <p class="str">Market Cap</p>
+                            <p class="num">$1,234,553,664,112.930</p>
+                        </div>
+                        <div class="item">
+                            <p class="str">Current Price</p>
+                            <p class="num">$64,112.930</p>
+                        </div>
+                        <div class="item">
+                            <p class="str">All Time High</p>
+                            <p class="num">$64,112.930</p>
+                        </div>
+                        <div class="item">
+                            <p class="str">All Time Low</p>
+                            <p class="num">$12.930</p>
+                        </div>
+                        <div class="item">
+                            <p class="str">Total Volume</p>
+                            <p class="num">$34,553,664,112.930</p>
+                        </div>
+                        <div class="item">
+                            <p class="str">Total Supply</p>
+                            <p class="num">$53,664,112.930</p>
+                        </div>
+                        <div class="item">
+                            <p class="str">Max Supply</p>
+                            <p class="num">$1,234,553,664,112.930</p>
+                        </div>
+                        <div class="item">
+                            <p class="str">Circulating Supply</p>
+                            <p class="num">$4,553,664,112.930</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main-section">
+                <div class="mini-chart">
+                    <div class="tradingview-widget-container" id="mini-chart-widget"></div>
+                </div>
+            </div>
+
+            <div class="right-section">
+                <div class="status">
+                    <h3>Historical Info</h3>
+                    <div class="container">
+                        <div class="item">
+                            <p class="str">ATH</p>
+                            <p class="num">$63,112.930</p>
+                        </div>
+                        <div class="item">
+                            <p class="str">ATL</p>
+                            <p class="num">$12.930</p>
+                        </div>
+                        <div class="item">
+                            <p class="str">24h High</p>
+                            <p class="num">$65,112.930</p>
+                        </div>
+                        <div class="item">
+                            <p class="str">24h Low</p>
+                            <p class="num">$65,010.820</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="status">
+                    <h3>Markets</h3>
+                    <div class="container">
+                        <div class="item">
+                            <p class="str">Binance</p>
+                            <div class="links">
+                                <a href="https://www.binanace.com/en/trade/BTC_USDT">Trade</a>
+                                <p style="background-color: rgb(0, 227, 0);">Trust</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <p class="str">CoinBase</p>
+                            <div class="links">
+                                <a href="https://www.coinbase.com/advanced-trade/spot/BTC_USDT">Trade</a>
+                                <p style="background-color: rgb(0, 227, 0);">Trust</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <p class="str">Kraken</p>
+                            <div class="links">
+                                <a href="https://pro.kraken.com/app/trade/BTC_USDT">Trade</a>
+                                <p style="background-color: rgb(0, 227, 0);">Trust</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="status">
+                    <h3>Info</h3>
+                    <div class="container">
+                        <div class="item">
+                            <p class="str">Website</p>
+                            <div class="links">
+                                <a target="_blank" href="https://www.bitcoin.org/">Visit</a>
+                                <a target="_blank" href="https://www.bitcoin.org/bitcoin.pdf">Whitepaper</a>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <p class="str">Community</p>
+                            <div class="links">
+                                <a target="_blank" href="https://x.com/bitcoin">Twitter</a>
+                                <a target="_blank" href="https://facebook.com/bitcoins">Facebook</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="coin-desc">
+            <h3>About Asset</h3>
+            <p id="coin-desc-p">
+                Bitcoin (BTC) is the world's first decentralized digital currency, created in 2009 by an anonymous person or group known as Satoshi Nakamoto. As a peer-to-peer cryptocurrency, Bitcoin allows users to exchange value directly, without the need for intermediaries such as banks or governments. Transactions are verified by network nodes through cryptography and recorded on a public distributed ledger called a blockchain.
+                <br><br>
+                Bitcoin's supply is capped at 21 million coins, making it a deflationary asset with scarcity embedded in its design. This limited supply, combined with its decentralized nature, has positioned Bitcoin as "digital gold" — a store of value that can potentially hedge against inflation and economic uncertainty. Over the years, Bitcoin has grown from a niche technology into a widely recognized asset class, adopted by millions of users, merchants, and institutions worldwide.
+                <br><br>
+                The Bitcoin network operates on a proof-of-work consensus mechanism, where miners solve complex mathematical problems to validate transactions and secure the network. This process, known as mining, rewards participants with newly minted Bitcoins and transaction fees, incentivizing network security and decentralization. As the first and most prominent cryptocurrency, Bitcoin has paved the way for a new era of financial innovation and remains a fundamental pillar of the evolving digital economy.
+                
+                Bitcoin is designed to have only 21 million BTC ever created, thus making it a deflationary currency.
+                Bitcoin uses the <a href="https://komodoplatform.com/en/academy/sha-256-algorithm/#:~:text=SHA%2D256%20is%20a%20popular,the%20original%20Bitcoin%20source%20code.">SHA-256</a> hashing algorithm with an average transaction confirmation time of 10 minutes.
+                Miners today are mining Bitcoin using ASIC chip dedicated to only mining Bitcoin, and the hash rate has shot up to peta hashes.
+
+                Being the first successful online cryptography currency, bitcoin has inspired other alternative currencies such as <a href="https://www.coingecko.com/en/coins/litecoin">Litecoin</a>,
+                <a href="https://www.coingecko.com/en/coins/peercoin">Peercoin</a>, and so on.
+
+                The cryptocurrency then took off with the innovation of the turing-complete smart contract by 
+                <a href="https://www.coingecko.com/en/coins/ethereum">Ethereum</a> which led to the development of other amazing projects such as <a href="https://www.coingecko.com/en/coins/eos">EOS</a>,
+                <a href="https://www.coingecko.com/en/coins/tron">Tron</a>, and even crypto-collectables such as 
+                <a href="https://www.coingecko.com/buzz/ethereum-still-king-dapps-cryptokitties-need-1-billion-on-eos">CryptoKitties</a>.
+            </p>
+            <div class="error-message" id="coin-info-error">API limit reached. Please try again later...</div>
+        </div>
+
+    </div>   
+      
+
+    <footer>
+        
+        <p>John_Biruk, All right reserved</p>
+        <div class="social-icons">
+            <a href="https://t.me/MrXbill" class="facebook" target="_blank"><i class="ri-telegram-line"></i></a>
+            <a href="https://www.instagram.com/john_kochovali/" class="instagram" target="_blank"><i class="ri-instagram-line"></i></a>
+            <a href="https://github.com/Yohannes18" class="github" target="_blank"><i class="ri-github-line"></i></a>
+            <a href="https://www.linkedin.com/in/johannes-biruk-440bb2304/" class="facebook" target="_blank"><i class="ri-linkedin-line"></i></a>                    
+            <a href="mailto:johannes0590@gmail.com" class="mail" target="_blank"><i class="ri-mail-send-fill"></i></a>
+            <a href="https://twitter.com/Johannesbrook3" class="twitter" target="_blank"><i class="ri-twitter-line"></i></a>
+        </div>
+            
+    </footer>
+
+    <button onclick="scrollToTop()" id="scrollTop"><i class="ri-arrow-up-s-line"></i></button>
+    <script src="../assets/js/global.js"></script>
+    <script src="../assets/js/coin.js"></script>
+
+</body>
+</html

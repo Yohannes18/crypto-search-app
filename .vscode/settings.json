@@ -1,0 +1,7 @@
+{
+    "workbench.editor.autoLockGroups": {
+        "default": true
+    },
+    "workbench.editor.closeOnFileDelete": true,
+    "workbench.editor.openPositioning": "right"
+}
